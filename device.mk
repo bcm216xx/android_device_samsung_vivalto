@@ -140,9 +140,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	camera2.portability.force_api=1 \
 	cm.updater.uri=http://akane.02ch.in/CyanogenModOTA/api
 
+# Atlas
+PRODUCT_PROPERTY_OVERRIDES += \
+        config.disable_atlas=true
+
 # MTP
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+        persist.sys.usb.config=mtp
 
 # Dalvik heap config
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
