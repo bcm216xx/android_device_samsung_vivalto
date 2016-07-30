@@ -104,6 +104,12 @@ endif
 endif
 DONT_DEXPREOPT_PREBUILTS := true
 
+# Disable compression of precompiled odex with gzip
+WITH_DEXPREOPT_COMP := false 
+
+# Enable position-independent code for odex files
+WITH_DEXPREOPT_PIC := true
+
 # Bootanimation
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
