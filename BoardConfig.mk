@@ -125,8 +125,8 @@ TARGET_POWERHAL_VARIANT := cm
 BOARD_RIL_CLASS := ../../../device/samsung/vivalto/ril/
 
 # Recovery
-TARGET_RECOVERY_INITRC := device/samsung/vivalto/rootdir/init.recovery.rc
-TARGET_RECOVERY_FSTAB := device/samsung/vivalto/rootdir/fstab.hawaii_ss_vivalto
+TARGET_RECOVERY_INITRC := device/samsung/vivalto/rootdir/etc/init.recovery.rc
+TARGET_RECOVERY_FSTAB := device/samsung/vivalto/rootdir/etc/fstab.hawaii_ss_vivalto
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
