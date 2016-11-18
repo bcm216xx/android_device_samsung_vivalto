@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/vivaltods5m/BoardConfigVendor.mk
+-include vendor/samsung/vivalto/BoardConfigVendor.mk
 
 # Platform
 TARGET_ARCH := arm
@@ -20,8 +20,7 @@ TARGET_UNIFIED_DEVICE := true
 BOARD_VENDOR := samsung
 
 # Assert
-# TARGET_OTA_ASSERT_DEVICE := vivaltods5m,G313HU,GT-G313HU,hawaii
-TARGET_OTA_ASSERT_DEVICE := vivaltonfc3g,G313HN,SM-G313HN,vivaltods5m,G313HU,SM-G313HU,hawaii
+TARGET_OTA_ASSERT_DEVICE := vivaltonfc3g,G313HN,SM-G313HN,vivaltods5m,G313HU,SM-G313HU,hawaii,vivalto
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_hawaii_ss
@@ -46,8 +45,8 @@ BOARD_FLASH_BLOCK_SIZE := 262144 #BOARD_KERNEL_PAGESIZE * 64
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/vivaltods5m/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/vivaltods5m/bluetooth/libbt_vndcfg_g313hu.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/vivalto/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/vivalto/bluetooth/libbt_vndcfg_g313hu.txt
 
 # Connectivity - Wi-Fi
 BOARD_WLAN_DEVICE                := bcmdhd
@@ -71,7 +70,7 @@ TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
 # Hardware rendering
-BOARD_EGL_CFG := device/samsung/vivaltods5m/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/vivalto/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_USE_MHEAP_SCREENSHOT := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
@@ -113,7 +112,7 @@ CHARGING_ENABLED_PATH := "/sys/class/power_supply/battery/batt_lp_charging"
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 
 # healthd
-BOARD_HAL_STATIC_LIBRARIES := libhealthd-vivaltods5m.hawaii
+BOARD_HAL_STATIC_LIBRARIES := libhealthd-vivalto.hawaii
 
 # Use the CM PowerHAL
 TARGET_USES_CM_POWERHAL := true
@@ -121,11 +120,11 @@ CM_POWERHAL_EXTENSION := hawaii
 TARGET_POWERHAL_VARIANT := cm
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/samsung/vivaltods5m/ril/
+BOARD_RIL_CLASS := ../../../device/samsung/vivalto/ril/
 
 # Recovery
-TARGET_RECOVERY_INITRC := device/samsung/vivaltods5m/rootdir/init.recovery.rc
-TARGET_RECOVERY_FSTAB := device/samsung/vivaltods5m/rootdir/fstab.hawaii_ss_vivaltods5m
+TARGET_RECOVERY_INITRC := device/samsung/vivalto/rootdir/init.recovery.rc
+TARGET_RECOVERY_FSTAB := device/samsung/vivalto/rootdir/fstab.hawaii_ss_vivalto
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -139,11 +138,11 @@ BOARD_SUPPRESS_EMMC_WIPE := true
 TARGET_RECOVERY_DENSITY := hdpi
 
 # CMHW
-BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/vivaltods5m/cmhw/
+BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/vivalto/cmhw/
 BOARD_USE_SAMSUNG_COLORFORMAT := false
 
 # GPS
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/vivaltods5m/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/vivalto/include
 
 # Compat
 TARGET_USES_LOGD := false
@@ -152,7 +151,7 @@ TARGET_USES_LOGD := false
 MALLOC_IMPL := dlmalloc
 
 BOARD_SEPOLICY_DIRS += \
-    device/samsung/vivaltods5m/sepolicy
+    device/samsung/vivalto/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file_contexts \
@@ -168,5 +167,3 @@ BOARD_SEPOLICY_UNION += \
     rild.te \
     shell.te \
     system_server.te 
-
-# plap

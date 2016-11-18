@@ -1,3 +1,3 @@
-ifeq ($(TARGET_DEVICE),vivaltods5m)
+ifeq ($(TARGET_DEVICE),vivalto)
     include $(all-subdir-makefiles)
 endif

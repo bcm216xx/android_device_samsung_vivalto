@@ -3,18 +3,18 @@ LOCAL_PATH:= $(call my-dir)
 # Init scripts
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.hawaii_ss_vivaltods5m.rc
+LOCAL_MODULE       := init.hawaii_ss_vivalto.rc
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init.hawaii_ss_vivaltods5m.rc
+LOCAL_SRC_FILES    := etc/init.hawaii_ss_vivalto.rc
 LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.hawaii_ss_vivaltods5m_base.rc
+LOCAL_MODULE       := init.hawaii_ss_vivalto_base.rc
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init.hawaii_ss_vivaltods5m_base.rc
+LOCAL_SRC_FILES    := etc/init.hawaii_ss_vivalto_base.rc
 LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
@@ -47,9 +47,9 @@ LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := ueventd.hawaii_ss_vivaltods5m.rc
+LOCAL_MODULE       := ueventd.hawaii_ss_vivalto.rc
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/ueventd.hawaii_ss_vivaltods5m.rc
+LOCAL_SRC_FILES    := etc/ueventd.hawaii_ss_vivalto.rc
 LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
