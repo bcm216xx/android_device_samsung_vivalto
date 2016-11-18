@@ -2,7 +2,7 @@
 PRODUCT_RELEASE_NAME := vivaltods5m
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/cm/config/common_mini_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/vivaltods5m/device_vivaltods5m.mk)
