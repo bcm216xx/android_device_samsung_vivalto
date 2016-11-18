@@ -13,17 +13,18 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/vivaltods5m/overlay
 
-# Init files
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/ramdisk/fstab.hawaii_ss_vivaltods5m:root/fstab.hawaii_ss_vivaltods5m \
-	$(LOCAL_PATH)/ramdisk/init.hawaii_ss_vivaltods5m.rc:root/init.hawaii_ss_vivaltods5m.rc \
-	$(LOCAL_PATH)/ramdisk/init.hawaii_ss_vivaltods5m_base.rc:root/init.hawaii_ss_vivaltods5m_base.rc \
-	$(LOCAL_PATH)/ramdisk/init.log.rc:root/init.log.rc \
-	$(LOCAL_PATH)/ramdisk/init.rc:root/init.rc \
-	$(LOCAL_PATH)/ramdisk/init.usb_hawaii_ss.rc:root/init.usb_hawaii_ss.rc \
-	$(LOCAL_PATH)/ramdisk/init.wifi.rc:root/init.wifi.rc \
-	$(LOCAL_PATH)/ramdisk/lpm.rc:root/lpm.rc \
-	$(LOCAL_PATH)/ramdisk/ueventd.hawaii_ss_vivaltods5m.rc:root/ueventd.hawaii_ss_vivaltods5m.rc # no need to cut off since init is patched.
+# Ramdisk
+PRODUCT_PACKAGES += \
+	fstab.hawaii_ss_vivaltods5m \
+        lpm.rc
+	
+PRODUCT_PACKAGES += \
+        init.hawaii_ss_vivaltods5m.rc \
+	init.hawaii_ss_vivaltods5m_base.rc \
+        init.log.rc \
+        init.wifi.rc \
+        init.usb_hawaii_ss.rc \
+	ueventd.hawaii_ss_vivaltods5m.rc
 	
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
@@ -57,7 +58,8 @@ PRODUCT_COPY_FILES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-	charger_res_images
+	charger_res_images \
+        lpm.rc
 
 # Insecure ADBD
 ADDITIONAL_DEFAULT_PROPERTIES += \
@@ -67,8 +69,8 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 # Filesystem management tools
 PRODUCT_PACKAGES += \
 	make_ext4fs \
-    e2fsck \
-    setup_fs
+        e2fsck \
+        setup_fs
 	
 # Open-source lights HAL
 PRODUCT_PACKAGES += \
@@ -137,7 +139,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.call_ring=0 \
 	camera2.portability.force_api=1 \
 	cm.updater.uri=http://akane.02ch.in/CyanogenModOTA/api
-	#persist.radio.multisim.config=dsds
 
 # MTP
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -157,4 +158,3 @@ endif
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_vivaltods5m
 PRODUCT_DEVICE := vivaltods5m
-PRODUCT_MODEL := CM on Vivalto

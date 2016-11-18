@@ -5,7 +5,7 @@ PRODUCT_RELEASE_NAME := vivaltods5m
 $(call inherit-product, vendor/cm/config/common_mini_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/vivaltods5m/device_vivaltods5m.mk)
+$(call inherit-product, device/samsung/vivaltods5m/device.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
@@ -15,5 +15,5 @@ PRODUCT_DEVICE := vivaltods5m
 PRODUCT_NAME := cm_vivaltods5m
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := CM on Vivalto
+PRODUCT_MODEL := Ace 4
 PRODUCT_CHARACTERISTICS := phone

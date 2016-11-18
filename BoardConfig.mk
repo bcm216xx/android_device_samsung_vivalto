@@ -124,8 +124,8 @@ TARGET_POWERHAL_VARIANT := cm
 BOARD_RIL_CLASS := ../../../device/samsung/vivaltods5m/ril/
 
 # Recovery
-TARGET_RECOVERY_INITRC := device/samsung/vivaltods5m/ramdisk/init.recovery.rc
-TARGET_RECOVERY_FSTAB := device/samsung/vivaltods5m/ramdisk/fstab.hawaii_ss_vivaltods5m
+TARGET_RECOVERY_INITRC := device/samsung/vivaltods5m/rootdir/init.recovery.rc
+TARGET_RECOVERY_FSTAB := device/samsung/vivaltods5m/rootdir/fstab.hawaii_ss_vivaltods5m
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
