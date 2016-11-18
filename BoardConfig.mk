@@ -95,12 +95,14 @@ BOARD_USE_BGRA_8888 := true
 BOARD_USES_ALSA_AUDIO := true
 
 # Enable dex-preoptimization to speed up the first boot sequence
-# of an SDK AVD. Note that this operation only works on Linux for now
 ifeq ($(HOST_OS),linux)
+ ifeq ($(TARGET_BUILD_VARIANT),userdebug)
   ifeq ($(WITH_DEXPREOPT),)
-    #WITH_DEXPREOPT := true
+    WITH_DEXPREOPT := true
   endif
 endif
+endif
+DONT_DEXPREOPT_PREBUILTS := true
 
 # Bootanimation
 TARGET_BOOTANIMATION_PRELOAD := true
