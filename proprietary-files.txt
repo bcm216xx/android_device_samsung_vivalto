@@ -1,9 +1,14 @@
+bin/at_distributor
+bin/atx
+bin/atxd
 bin/bkmgrd
 bin/edmaudit
 bin/glgps
 bin/gps.cer
 bin/macloader
 bin/mfgloader
+bin/usb_portd
+bin/usb_devmode
 bin/watchdogd
 bin/wlandutservice
 etc/gps/glconfig.xml
@@ -14,6 +19,7 @@ etc/wifi/nvram_mfg.txt
 etc/wifi/nvram_net.txt
 etc/asound.conf
 etc/gps.conf
+etc/usb_portd.conf
 lib/egl/libGLES_hawaii.so
 lib/hw/audio.primary.hawaii.so
 lib/hw/camera.hawaii.so
@@ -34,6 +40,8 @@ lib/lib_Samsung_SB_AM_for_ICS_v04004.so
 lib/lib_SamsungRec_V04002.so
 lib/libaacdecoderwrapper.so
 lib/libat.so
+lib/libatlog.so
+lib/libatparser.so
 lib/libat_stubs.so
 lib/libaudiopolicy_sec.so
 lib/libbcm_hp_filter.so
